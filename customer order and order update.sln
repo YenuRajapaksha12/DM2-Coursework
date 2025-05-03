@@ -1,25 +1,60 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customer order and order update", "customer order and order update\customer order and order update.csproj", "{301D8182-4404-4972-9858-51C750B78584}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{301D8182-4404-4972-9858-51C750B78584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{301D8182-4404-4972-9858-51C750B78584}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{301D8182-4404-4972-9858-51C750B78584}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{301D8182-4404-4972-9858-51C750B78584}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {42A1FB69-FB51-4BAC-995E-626D8A99C978}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace customer_order_and_update
+{
+    internal class customer_order
+    {
+    }
+}
+// Required NuGet package: Oracle.ManagedDataAccess using System; using System.Windows.Forms; using Oracle.ManagedDataAccess.Client;
+
+namespace CustomerOrderApp
+{
+    public partial class MainForm : Form
+    {
+        private string connectionString = "User Id=system;Password=yenuli;Data Source=DESKTOP-07IQIFU:1521/XEPDB1;"
+
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(txtOrderId.Text, out int orderId) ||
+                !int.TryParse(txtCustomerId.Text, out int customerId) ||
+                !double.TryParse(txtAmount.Text, out double amount))
+            {
+                MessageBox.Show("Please enter valid input values.");
+                return;
+            }
+
+            using (OracleConnection conn = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (OracleCommand cmd = new OracleCommand("INSERT_CUSTOMER_ORDER", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("P_ORDER_ID", OracleDbType.Int32).Value = orderId;
+                        cmd.Parameters.Add("P_CUSTOMER_ID", OracleDbType.Int32).Value = customerId;
+                        cmd.Parameters.Add("P_ORDER_AMOUNT", OracleDbType.Double).Value = amount;
+                        cmd.Parameters.Add("P_ORDER_STATUS", OracleDbType.Varchar2).Value = txtStatus.Text;
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Order inserted successfully!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
