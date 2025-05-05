@@ -25,17 +25,16 @@ private void InitializeComponent()
 
     //labelOrderId
     this.labelOrderId.Text = "Order_ID"
-    this.labelOrderId.Location = new point
-    this.labelOrderId.Size = new size
-      
+    this.labelOrderId.Location = new System.Drawing.Point
+    this.labelOrderId.Size = new System.Drawing.Size(53, 15);      
     // txtOrderId
     this.txtOrderId.Location = new System.Drawing.Point(30, 30);
     this.txtOrderId.Size = new System.Drawing.Size(200, 23);
 
    //labelCustomerId
     this.labelCustomerId.Text = "Customer_ID"
-    this.labelCustomerId.Location = new point
-    this.labelCustomerId.Size = new size
+    this.labelCustomerId.Location = new System.Drawing.Point
+    this.labelCustomerId.Size = new System.Drawing.Size(75, 15);
 
     // txtCustomerId
     this.txtCustomerId.Location = new System.Drawing.Point(30, 70);
@@ -43,8 +42,8 @@ private void InitializeComponent()
 
     //labelAmount
     this.labelAmount.Text = "Order_Amount"
-    this.labelAmount.Location = new point
-    this.labelAmount.Size = new size
+    this.labelAmount.Location = new System.Drawing.Point
+    this.labelAmount.Size = new System.Drawing.Size(86, 15);
         
     // txtAmount
     this.txtAmount.Location = new System.Drawing.Point(30, 110);
@@ -52,8 +51,8 @@ private void InitializeComponent()
 
     //labelStatus
     this.labelStatus.Text = "Order_Status"
-    this.labelStatus.Location = new point
-    this.labelStatus.Size = new size
+    this.labelStatus.Location = new System.Drawing.Point
+    this.labelStatus.Size = new System.Drawing.Size(74, 15);
 
     // txtStatus
     this.txtStatus.Location = new System.Drawing.Point(30, 150);
@@ -81,7 +80,7 @@ private void InitializeComponent()
     this.ClientSize = new System.Drawing.Size(284, 261);
     this.Controls.Add(this.labelOrderId);
     this.Controls.Add(this.labelCustomerId);
-    this.this.Controls.Add(this.labelAmount);
+    this.Controls.Add(this.labelAmount);
     this.Controls.Add(this.labelStatus);    
     this.Controls.Add(this.txtOrderId);
     this.Controls.Add(this.txtCustomerId);
@@ -96,6 +95,10 @@ private void InitializeComponent()
 }
 
 // Declare controls
+private System.Windows.Forms.Label labelOrderId;
+private System.Windows.Forms.Label labelCustomerId;
+private System.Windows.Forms.Label labelAmount;
+private System.Windows.Forms.Label labelStatus;
 private System.Windows.Forms.TextBox txtOrderId;
 private System.Windows.Forms.TextBox txtCustomerId;
 private System.Windows.Forms.TextBox txtAmount;
