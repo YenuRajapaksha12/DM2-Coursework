@@ -13,7 +13,7 @@ namespace customer_order_and_update
 }
 // Required NuGet package: Oracle.ManagedDataAccess using System; using System.Windows.Forms; using Oracle.ManagedDataAccess.Client;
 
-namespace CustomerOrderApp
+namespace customer order and order update
 {
     public partial class MainForm : Form
     {
@@ -21,7 +21,7 @@ namespace CustomerOrderApp
 
         public MainForm()
         {
-            InitializeComponent();
+            customer order and order update Form();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
