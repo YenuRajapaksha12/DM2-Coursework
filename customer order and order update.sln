@@ -58,3 +58,38 @@ namespace CustomerOrderApp
                 }
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(txtOrderId.Text, out int orderId) ||
+                !double.TryParse(txtAmount.Text, out double amount))
+            {
+                MessageBox.Show("Please enter valid Order ID and Amount.");
+                return;
+            }
+
+            using (OracleConnection conn = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (OracleCommand cmd = new OracleCommand("UPDATE_CUSTOMER_ORDER", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("P_ORDER_ID", OracleDbType.Int32).Value = orderId;
+                        cmd.Parameters.Add("P_ORDER_AMOUNT", OracleDbType.Double).Value = amount;
+                        cmd.Parameters.Add("P_ORDER_STATUS", OracleDbType.Varchar2, 20).Value = txtStatus.Text.Trim();
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Order updated successfully!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+    }
+}
