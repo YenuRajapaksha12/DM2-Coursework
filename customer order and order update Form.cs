@@ -26,7 +26,7 @@ private void customer order and order update Form()
     //labeltitle
     this.labeltitle.Font = new System.Drawing.Font("Segoe UI", 9F, FontStyle.Regular);
     this.labeltitle.Location = new System.Drawing.Point(12, 9);
-    this.labeltitle.Size = new System.Drawing.Size(816, 489);
+    this.labeltitle.Size = new System.Drawing.Size(800, 262);
     this.labeltitle.Text = " customer order and order update";
     this.labeltitle.TextAlign = ContentAlignment.MiddleCenter;
     
