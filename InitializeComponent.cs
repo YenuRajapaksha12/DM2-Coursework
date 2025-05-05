@@ -11,6 +11,10 @@ namespace customer_order_and_update
 }
 private void InitializeComponent()
 {
+    this.labelOrderId = new System.Windows.Forms.Label();
+    this.labelCustomerId = new System.Windows.Forms.Label();
+    this.labelAmount = new System.Windows.Forms.Label();
+    this.labelStatus = new System.Windows.Forms.Label();
     this.txtOrderId = new System.Windows.Forms.TextBox();
     this.txtCustomerId = new System.Windows.Forms.TextBox();
     this.txtAmount = new System.Windows.Forms.TextBox();
@@ -18,29 +22,41 @@ private void InitializeComponent()
     this.btnInsert = new System.Windows.Forms.Button();
     this.btnUpdate = new System.Windows.Forms.Button();
     this.SuspendLayout();
-    
+
+    //labelOrderId
+    this.labelOrderId.Text = "Order_ID"
+    this.labelOrderId.Location = new point
+    this.labelOrderId.Size = new size
+      
     // txtOrderId
     this.txtOrderId.Location = new System.Drawing.Point(30, 30);
-    this.txtOrderId.Name = "txtOrderId";
-    this.txtOrderId.PlaceholderText = "Order ID";
     this.txtOrderId.Size = new System.Drawing.Size(200, 23);
+
+   //labelCustomerId
+    this.labelCustomerId.Text = "Customer_ID"
+    this.labelCustomerId.Location = new point
+    this.labelCustomerId.Size = new size
 
     // txtCustomerId
     this.txtCustomerId.Location = new System.Drawing.Point(30, 70);
-    this.txtCustomerId.Name = "txtCustomerId";
-    this.txtCustomerId.PlaceholderText = "Customer ID";
     this.txtCustomerId.Size = new System.Drawing.Size(200, 23);
 
+    //labelAmount
+    this.labelAmount.Text = "Order_Amount"
+    this.labelAmount.Location = new point
+    this.labelAmount.Size = new size
+        
     // txtAmount
     this.txtAmount.Location = new System.Drawing.Point(30, 110);
-    this.txtAmount.Name = "txtAmount";
-    this.txtAmount.PlaceholderText = "Order Amount";
     this.txtAmount.Size = new System.Drawing.Size(200, 23);
+
+    //labelStatus
+    this.labelStatus.Text = "Order_Status"
+    this.labelStatus.Location = new point
+    this.labelStatus.Size = new size
 
     // txtStatus
     this.txtStatus.Location = new System.Drawing.Point(30, 150);
-    this.txtStatus.Name = "txtStatus";
-    this.txtStatus.PlaceholderText = "Order Status";
     this.txtStatus.Size = new System.Drawing.Size(200, 23);
 
     // btnInsert
@@ -63,6 +79,10 @@ private void InitializeComponent()
     this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
     this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
     this.ClientSize = new System.Drawing.Size(284, 261);
+    this.Controls.Add(this.labelOrderId);
+    this.Controls.Add(this.labelCustomerId);
+    this.this.Controls.Add(this.labelAmount);
+    this.Controls.Add(this.labelStatus);    
     this.Controls.Add(this.txtOrderId);
     this.Controls.Add(this.txtCustomerId);
     this.Controls.Add(this.txtAmount);
