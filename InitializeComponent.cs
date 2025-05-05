@@ -25,41 +25,42 @@ private void InitializeComponent()
 
     //labelOrderId
     this.labelOrderId.Text = "Order_ID"
-    this.labelOrderId.Location = new System.Drawing.Point
-    this.labelOrderId.Size = new System.Drawing.Size(53, 15);      
+    this.labelOrderId.Location = new System.Drawing.Point();
+    this.labelOrderId.Size = new System.Drawing.Size(53, 15);
+    
     // txtOrderId
-    this.txtOrderId.Location = new System.Drawing.Point(30, 30);
+    this.txtOrderId.Location = new System.Drawing.Point(297, 28);
     this.txtOrderId.Size = new System.Drawing.Size(200, 23);
 
    //labelCustomerId
     this.labelCustomerId.Text = "Customer_ID"
-    this.labelCustomerId.Location = new System.Drawing.Point
+    this.labelCustomerId.Location = new System.Drawing.Point();
     this.labelCustomerId.Size = new System.Drawing.Size(75, 15);
 
     // txtCustomerId
-    this.txtCustomerId.Location = new System.Drawing.Point(30, 70);
+    this.txtCustomerId.Location = new System.Drawing.Point(297, 71);
     this.txtCustomerId.Size = new System.Drawing.Size(200, 23);
 
     //labelAmount
     this.labelAmount.Text = "Order_Amount"
-    this.labelAmount.Location = new System.Drawing.Point
+    this.labelAmount.Location = new System.Drawing.Point();
     this.labelAmount.Size = new System.Drawing.Size(86, 15);
         
     // txtAmount
-    this.txtAmount.Location = new System.Drawing.Point(30, 110);
+    this.txtAmount.Location = new System.Drawing.Point(297, 116);
     this.txtAmount.Size = new System.Drawing.Size(200, 23);
 
     //labelStatus
     this.labelStatus.Text = "Order_Status"
-    this.labelStatus.Location = new System.Drawing.Point
+    this.labelStatus.Location = new System.Drawing.Point();
     this.labelStatus.Size = new System.Drawing.Size(74, 15);
 
     // txtStatus
-    this.txtStatus.Location = new System.Drawing.Point(30, 150);
+    this.txtStatus.Location = new System.Drawing.Point(297, 165);
     this.txtStatus.Size = new System.Drawing.Size(200, 23);
 
     // btnInsert
-    this.btnInsert.Location = new System.Drawing.Point(30, 200);
+    this.btnInsert.Location = new System.Drawing.Point(545, 48);
     this.btnInsert.Name = "btnInsert";
     this.btnInsert.Size = new System.Drawing.Size(90, 30);
     this.btnInsert.Text = "Insert Order";
@@ -67,7 +68,7 @@ private void InitializeComponent()
     this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
 
     // btnUpdate
-    this.btnUpdate.Location = new System.Drawing.Point(140, 200);
+    this.btnUpdate.Location = new System.Drawing.Point(545, 138);
     this.btnUpdate.Name = "btnUpdate";
     this.btnUpdate.Size = new System.Drawing.Size(90, 30);
     this.btnUpdate.Text = "Update Order";
