@@ -9,7 +9,7 @@ namespace customer_order_and_update
 {
 
 }
-private void InitializeComponent()
+private void customer order and order update Form()
 {
     this.labelOrderId = new System.Windows.Forms.Label();
     this.labelCustomerId = new System.Windows.Forms.Label();
@@ -23,9 +23,16 @@ private void InitializeComponent()
     this.btnUpdate = new System.Windows.Forms.Button();
     this.SuspendLayout();
 
+    //labeltitle
+    this.labeltitle.Font = new System.Drawing.Font("Segoe UI", 9F, FontStyle.Regular);
+    this.labeltitle.Location = new System.Drawing.Point(12, 9);
+    this.labeltitle.Size = new System.Drawing.Size(816, 489);
+    this.labeltitle.Text = " customer order and order update";
+    this.labeltitle.TextAlign = ContentAlignment.MiddleCenter;
+    
     //labelOrderId
     this.labelOrderId.Text = "Order_ID"
-    this.labelOrderId.Location = new System.Drawing.Point();
+    this.labelOrderId.Location = new System.Drawing.Point(236, 31);
     this.labelOrderId.Size = new System.Drawing.Size(53, 15);
     
     // txtOrderId
@@ -34,7 +41,7 @@ private void InitializeComponent()
 
    //labelCustomerId
     this.labelCustomerId.Text = "Customer_ID"
-    this.labelCustomerId.Location = new System.Drawing.Point();
+    this.labelCustomerId.Location = new System.Drawing.Point(214, 74);
     this.labelCustomerId.Size = new System.Drawing.Size(75, 15);
 
     // txtCustomerId
@@ -43,7 +50,7 @@ private void InitializeComponent()
 
     //labelAmount
     this.labelAmount.Text = "Order_Amount"
-    this.labelAmount.Location = new System.Drawing.Point();
+    this.labelAmount.Location = new System.Drawing.Point(203, 116);
     this.labelAmount.Size = new System.Drawing.Size(86, 15);
         
     // txtAmount
@@ -52,7 +59,7 @@ private void InitializeComponent()
 
     //labelStatus
     this.labelStatus.Text = "Order_Status"
-    this.labelStatus.Location = new System.Drawing.Point();
+    this.labelStatus.Location = new System.Drawing.Point(215, 165);
     this.labelStatus.Size = new System.Drawing.Size(74, 15);
 
     // txtStatus
